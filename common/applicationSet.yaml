@@ -27,3 +27,10 @@ spec:
       destination:
         server: '{{url}}'
         namespace: project001
+      syncPolicy:
+        automated:
+          allowEmpty: true
+          prune: true
+          selfHeal: true
+        syncOptions:
+          - CreateNamespace=true
