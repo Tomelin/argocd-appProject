@@ -9,19 +9,21 @@ spec:
       elements:
       - cluster: engineering-dev
         url: https://kubernetes.default.svc
-        
+        name: guestbook
+        env: dev
       - cluster: engineering-prod
         url: https://kubernetes.default.svc
-
+        name: guestbook
+        env: dev
   template:
     metadata:
-      name: '{{cluster}}'
+      name: '{{name}}-{{cluster}}'
     spec:
       project: project001
       source:
         repoURL: https://github.com/argoproj/applicationset.git
         targetRevision: HEAD
-        path: examples/list-generator/guestbook/{{cluster}}
+        path: overlays/{{env}}/{{cluster}}
       destination:
         server: '{{url}}'
         namespace: project001
