@@ -10,7 +10,7 @@ spec:
     server: https://kubernetes.default.svc
   project: myproject
   source:
-    path: sample-app/
+    path: deploy/kubernetes
     repoURL: https://github.com/Tomelin/argocd-backstage.git
     targetRevision: HEAD
   syncPolicy:
