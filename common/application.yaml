@@ -13,6 +13,8 @@ spec:
     path: deploy/kubernetes
     repoURL: https://github.com/Tomelin/argocd-backstage.git
     targetRevision: HEAD
+    kustomize:
+      version: v4.5.7
   syncPolicy:
     syncOptions:
     - CreateNamespace=true
