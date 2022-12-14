@@ -4,5 +4,5 @@ namespace: argocd
 
 resources:
 - appProject.yaml
-- applicationSet.yaml
+- application.yaml
 
